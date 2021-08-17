@@ -92,7 +92,7 @@ box-shadow:3px 3px 2px grey;
 background:linear-gradient(to right,orange,white);
 }
 
-@media screen and (max-width:800px){
+@media screen and (max-width:1081px){
 .top{
 flex-direction:column;
 }
