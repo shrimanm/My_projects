@@ -67,14 +67,15 @@ h3{
 text-decoration:underline;
 }
 }
-
 @media screen and (max-width:800px){
 .top{
 flex-direction:column;
 }
 .top .heading{order:-1;
 padding:5px;}
-
+.middle{
+flex-direction:column;
+}
 }
 .content a{
 color:black;
