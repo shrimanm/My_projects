@@ -1,6 +1,4 @@
-function win(){
-var mywindow = window.open("https://shrimanm.github.io/project-1/calculator/","","width=430px,height=430px");
-}
+
 let screen=document.getElementById('screen');
 let button = document.querySelectorAll('button');
 let screenvalue = '';
