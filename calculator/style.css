@@ -1,0 +1,44 @@
+body{
+    background:pink;
+}
+table{
+    width:250px;
+    margin-top:10px;
+    padding:10px;
+}
+.container{
+    text-align:center;
+    display:inline-block;
+    background:rgb(238, 255, 0);
+    text-transform:uppercase;
+    border-radius:20px;
+    box-shadow:5px 5px 7px 5px grey;
+}
+
+input{
+    width:245px;
+    height:35px;
+    font-size:20px;
+    font-weight:bold;
+    border:2px solid black; 
+    border-radius:10px;
+    box-shadow:5px 5px 7px 2px grey;
+
+}
+h2{
+    box-shadow:5px 5px 7px 2px grey;
+    width:200px;
+    margin:20px 10px 20px 70px;
+    border-radius:10px;
+}
+button{
+    width:60px;
+    height:40px;
+    font-size:20px;
+    background:rgb(0, 113, 128);
+    color:rgb(255, 208, 0);
+    border-radius:10px;
+    font-weight:bold;
+    box-shadow:5px 5px 7px 2px grey;
+
+}
