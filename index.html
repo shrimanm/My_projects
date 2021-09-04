@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/brands.css" integrity="sha384-S5yUroXKhsCryF2hYGm7i8RQ/ThL96qmmWD+lF5AZTdOdsxChQktVW+cKP/s4eav" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
         body{
-                background-image: url("wallpaper1.jpg");
+                background-image: url("images/wallpaper1.jpg");
                 width:100%;
                 height:100%;
                 background-size: cover;
@@ -43,10 +45,41 @@
             margin:40px auto auto auto;
             padding:13px;
         }
+        .social-links{
+            margin:40px 10px 10px 10px;
+        }
+        .social-links ul {
+            display:flex;
+            flex-direction: row;
+            list-style: none;
+        }
+        .social-links ul li{
+            width:40px;
+            height:40px;
+        
+        }
+        a{
+         color:white;   
+         margin:auto;
+         margin-top:5px;
+         padding:30px;
+        }
+        .top{
+            display:flex;
+        }
     </style>
 </head>
 <body>
-    <h2>welcome to my page</h2>
+    <div class = "top">
+    <div class="social-links">
+        <ul>
+        <li><a href="https://www.facebook.com/shriman.mogaveer.1"><i class="fab fa-facebook-square"></i></a></li>
+        <li><a href=""><i class="fab fa-twitter-square"></i></a></li>
+        <li><a href="https://www.instagram.com/18shriman/"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+        </div>
+    <h2>welcome</h2>
+</div>
     <button onclick = "course()">course</button>
     <button onclick = "calculator()">calculator</button>
     <script>
