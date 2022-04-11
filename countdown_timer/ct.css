@@ -8,8 +8,8 @@ body{
     margin:0;
     background-image: url("birthday.jpg");
     height:100vh;
-    background-position: center;
-    background-size: cover;
+    background-position:center;
+    background-size:auto;
     display:flex;
     flex-direction: column;
 }
