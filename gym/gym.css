@@ -1,0 +1,684 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo:ital@1&display=swap");
+    
+    
+body{
+    font-family: 'Arvo', serif;
+    margin:0;
+    padding:0;
+    text-transform: capitalize;
+    width:800px;
+    overflow-x:hidden;
+    background:white;
+    transition:all 3s linear;
+
+}
+*{
+    transition:all .3s linear;
+
+}
+
+::selection{
+    background:rgb(252, 252, 4);
+    color:black;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+}
+nav{
+    position:fixed;
+    margin-top:-10px;
+    z-index: 10001;
+    width:100vw;
+    display:flex;
+    align-items: center;
+    background:yellow;
+    justify-content: space-around;
+    margin-bottom: 0;
+}
+nav .links ul{
+    list-style: none;
+    display: flex;
+
+}
+nav .links ul li{
+    margin-right:10px;
+}
+nav .links ul li a:hover{
+    background:rgba(155, 154, 154,.5);
+}
+
+nav .links a{
+    margin-right: 10px;
+    text-decoration: none;
+    color:black;
+    font-weight: bold;
+}
+nav {
+    border-bottom:2px solid black;
+    margin-bottom: 5px;
+}
+nav #menu{
+    display:none;
+    cursor: pointer ;
+    margin:auto 40%;
+    font-size: 1.8rem;
+
+}
+nav .join{
+    margin-right: 200px;
+    cursor: pointer;
+    border:2px solid black;
+    padding:5px;
+}
+nav .join:hover{
+background:rgb(170, 170, 102);
+}
+header .logo{
+    font-size:2.5rem;
+    margin:auto 10px;
+    justify-content: flex-start;
+    margin-left: 100px;
+}
+
+nav .links ul ul{
+    display: none;
+}
+nav .links ul li:hover >ul{
+    display: block;
+    position:absolute;
+    top:35px;
+    border-radius:10px ;
+    background: black;
+    border:2px solid white;
+
+
+}
+nav .links ul ul li {
+    padding:5px;
+    margin-top:4px;
+    border:2px solid black;
+    
+}
+
+nav .links ul ul li a{
+    color:white;
+    background:none;
+
+}
+nav .links li > a:after{
+    content: "  +";
+}
+nav .links li > a:only-child:after{
+content: "";
+}
+nav .links ul ul ul{
+    display: none;
+    position: relative;
+    background: black;
+}
+nav .links ul ul li:hover > ul{
+    display:inline-block;
+    top:100px;
+    left:180px;
+    border:2px solid white;
+
+}
+.onscroll{
+    box-shadow: 0 3px 7px 1px yellow;
+}
+.login{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 100;
+background:rgba(219, 211, 211,.5);
+text-align: center;
+
+}
+.loginform{
+margin-top: 150px;
+margin-left: 40%;
+width:350px;
+height: 300px;
+background:yellow;
+border-radius: 30px;
+}
+.login .loginform h3{
+    padding:10px;
+    font-size: 1.3rem;
+    text-decoration: underline;
+}
+
+.login .loginform .input{
+padding:7px;
+}
+
+.login .loginform .input input{
+padding:4px;
+border-radius: 10px;
+}
+
+.login .loginform .loginbtn{
+padding:10px;
+}
+
+.login .loginform .loginbtn input{
+padding: 7px;
+font-size: 1.2rem;
+background:chartreuse;
+border-radius: 10px;
+}
+
+.login .loginform a{
+font-size:1.2rem;
+text-decoration: none;
+color:black;
+}
+
+.login .loginform input[type="submit"]{
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+.login .loginform .wrong a{
+    float:inline-end;
+    font-size: 2rem;
+}
+.login .loginform .sig{
+    padding:15px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.login .loginform .sig span{
+text-decoration: underline;
+color:blue;
+font-size: 1.3rem;
+}
+
+
+
+
+.signin{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 101;
+background:rgba(219, 211, 211,.5);
+text-align: center;
+
+}
+.signinform{
+margin-top: 150px;
+margin-left: 40%;
+width:350px;
+height: 300px;
+background:yellow;
+border-radius: 30px;
+}
+.signin .signinform h3{
+    padding:10px;
+    font-size: 1.3rem;
+    text-decoration: underline;
+}
+
+.signin .signinform .input{
+padding:7px;
+}
+
+.signin .signinform .input input{
+padding:4px;
+border-radius: 10px;
+}
+
+.signin .signinform .signinbtn{
+padding:10px;
+
+}
+
+.signin .signinform .signinbtn input{
+padding: 7px;
+font-size: 1.2rem;
+background:chartreuse;
+border-radius: 10px;
+}
+
+.signin .signinform a{
+font-size:1.2rem;
+text-decoration: none;
+color:black;
+}
+
+.signin .signinform input[type="submit"]{
+    cursor: pointer;
+}
+
+.signin .signinform .wrong a{
+    float:inline-end;
+    font-size: 2rem;
+}
+
+
+
+
+
+
+
+.slide{
+    height:500px;
+    width:100vw;
+    margin-top:40px;
+}
+
+.slide .image-slide{
+    width:100%;
+    height:500px;
+    padding:0 ;
+    z-index:-1;
+    margin:auto;
+    margin-top: -30px;
+}
+.image-slide img{
+    width:100vw;
+    height:500px;
+
+}
+  
+.slide .controls{
+    position:absolute;
+    left:40%;
+    top:430px;
+    padding:.7rem;
+    background:rgba(36, 33, 33, 0.5);
+    border-radius: 20px;
+
+}
+.slide .controls .img{
+    width:.6rem;
+    height:.6rem;
+    border:2px solid rgb(231, 222, 222);
+    padding:5px;
+    border-radius: 50%;
+    margin-right: 10px;
+    display:inline-block;
+
+    
+}
+
+.slide .controls .img.active{
+background:yellow;
+}
+
+.circle{
+    padding:3rem;
+    width:4rem;
+    height:5px;
+    background:white;
+    position: absolute;
+    top:490px;
+    left:43%;
+    border-radius: 50%;
+    
+}
+.quotes{
+    position:absolute;
+    top:10%;
+}
+.quotes h3{
+    position:relative;
+    top:280px;
+    text-align: center;
+    font-size:1.4rem;
+    color:rgb(255, 230, 0);
+    background:rgba(19, 19, 15,.8);
+    border-radius: 30px;
+    padding:10px;
+}
+
+.quotes h2{
+    position:absolute;
+    text-align: center;
+    font-size:2.4rem;
+    color:rgb(255, 230, 0);
+    background:rgba(19, 19, 15,.8);
+    border-radius: 30px;
+    padding:10px;
+    left:45vw;
+}
+
+.rocket{
+    display: none;
+    position:fixed;
+    bottom:3rem;
+    right: 2rem;
+    width:40px;
+    height: 80px;
+    cursor: pointer;
+    transition: ;
+}
+.rocket img{
+    width:80px;
+    height: 90px;
+    animation:scrolling 3s linear infinite;
+}
+@keyframes scrolling {
+    0%,100%{
+transform: translateY(0rem);
+    }
+    50%{
+transform:translateY(3rem);
+    }
+}
+
+.second{
+    width:100vw;
+    position:relative;
+    text-align: center;
+}
+.second h2{
+    font-size:2rem;
+}
+.second h3{
+    font-size:1.5rem;
+}
+.second .facility{
+display:flex;
+justify-content: space-between;
+}
+.second .facility i{
+    font-size:2rem;
+}
+
+.download{
+    text-align: center;
+    height:200px;
+}
+.download{
+    width:100%;
+    background-image: url('gym-images/slide3.jpg');
+    background-size:100%;
+    color:yellow;
+    font-weight: bold;
+    border:3px solid black ;
+    padding:20px;
+}
+
+.download h3{
+    
+}
+.download h4{
+
+}
+.download h5{
+    border:2px solid black;
+    width:170px;
+    padding:10px;
+    margin:auto;
+    background:rgba(109, 109, 83, 0.8);
+    border-radius: 20px;
+    cursor: pointer;
+}
+.download h5:hover{
+    background:rgba(109, 109, 83, 0.3);
+}
+.video{
+display: flex;
+justify-content: space-around;
+}
+video{
+    position: relative;
+    width:90%;
+    height: 400px
+    
+}
+.video .info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size:1.5rem;
+}
+.video .info input{
+    padding:7px;
+    margin:5px;
+    border-radius: 10px;
+}
+.video .info textarea{
+    padding:7px;
+    margin:5px;
+    border-radius: 10px;
+}
+
+.m{
+    color:black;
+
+}
+.galler{
+    background:linear-gradient(to left,red ,rgb(255, 255, 198)) ;
+    transition: 4s;
+    position: absolute;
+    padding-bottom: 20px;
+    z-index: 1001;
+}
+.gall{
+    width:200vw;
+    padding:20px;
+    display:flex;
+}
+.gall img{
+    width:200px;
+    height:200px;
+    margin:10px;
+}
+
+.blogs{
+    background-image: url('gym-images/slide1.jpg');
+    background-size: cover;
+    filter:saturate(50%) opacity();
+    padding:10px;
+    color:orange;
+margin:20px;
+}
+
+.blogs .blog{
+    display:flex;
+    flex-direction: row;
+}
+
+.blogs .blog .bl{
+    background:rgba(17, 17, 16, 0.7);
+    margin:10px;
+    border-radius: 20px;;
+}
+.blogs h3{
+    background:rgba(17, 17, 16, 0.7);
+    justify-content: center;
+    font-weight:bold;
+    border-radius: 30px;
+    width:300px;
+    position: relative;
+    margin:auto;
+}
+.blogs .blog .bl a{
+text-decoration: none;
+color:red;
+}
+
+.quick-links{
+    padding:20px;
+    background-image: url('gym-images/slide1.jpg');
+    width:100vw;
+    height:440px;
+    display:flex;
+    position: relative;
+    top:410px;
+    justify-content:space-evenly;
+
+}
+
+.quick-links .link{
+    background:rgba(17, 17, 16, 0.7);
+    text-align: left;
+    border-radius: 30px;
+    width:30%;
+    color:yellow;
+
+}
+.quick-links ul{
+    list-style: none;
+    
+}
+
+.quick-links .contact-us a{
+    text-decoration: none;
+color:yellow;
+margin-top: 10px;
+font-size: 1.2rem;
+}
+
+.quick-links ul li{
+    margin-top: 5px;
+}
+
+.quick-links .contact-us{
+    display:flex;
+flex-direction: column;
+padding:10px;
+padding-left: 30px;
+}
+
+.quick-links .contact-us i{
+    font-size:1.8rem;
+}
+
+.quick-links .links ul li a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color:yellow;
+
+}
+.quick-links .links ul li{
+    position: relative;
+    margin-top: 15px;
+}
+
+.video .info a{
+    margin-top: 10px;
+    font-size: 1rem;
+    text-decoration: none;
+    color:red;
+    cursor: pointer;
+}
+
+.galler h4 a{
+    text-decoration: none;
+    color:black;
+    font-size:1.3rem;
+}
+
+
+
+
+
+
+@media (max-width:1000px){
+body{
+    font-size:1rem;
+    width:100%;
+}
+    nav{
+        padding:10px;
+
+    }
+    nav .links{
+        width:50%;
+        transform: scaleY(0);
+            position:absolute;
+            top:0;        
+    }
+    .fa-times{
+        transform:rotate(180deg);
+    }
+    nav .links ul{
+
+        left:0;
+        position:absolute;
+        top:77px;
+        right:0;
+        display: block;
+        background:rgba(245, 245, 20,0.7);
+        width:100%;
+        border-top:2px solid black;
+        padding-bottom: 10px;
+        border-radius: 20px;
+    }
+    nav .links ul li{
+        margin-left: -12px;
+        margin-top:10px;
+        border: 1px solid black;
+        padding:10px;
+        width:92%;
+        justify-content: center;
+    }
+
+    nav #menu{
+        display:block;
+
+    }
+
+nav .links.active{
+    transform: scaleY(1);
+    }
+    .second .facility{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .second .facility .fac{
+        margin-right: 100px;
+    }
+    .gallery{
+        position:absolute;
+        top:223%;
+    }
+    .blogs{
+        top:260%;
+    }
+
+    .loginform{
+        margin-top: 150px;
+        margin-left: 32%;
+    }
+
+    .signinform{
+        margin-top: 150px;
+        margin-left: 32%;
+    }
+}
+
+@media(max-width:620px){
+.gallery{
+    top:238%;
+}
+.quick-links{
+    font-size: .6rem;
+}
+.quick-links .contact-us i{
+    font-size:1rem;
+}
+.quick-links .contact-us a{
+font-size: .7rem;
+}
+.blogs .blog{
+ flex-direction: column;   
+}
+.video{
+    flex-direction: column;
+}
+}
+
+
+
+
+
