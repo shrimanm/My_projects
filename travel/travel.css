@@ -1,0 +1,696 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@500&display=swap');
+
+
+
+*{
+    font-family: 'Kaisei Tokumin', serif;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-transform:capitalize;
+    outline:none;
+    border:none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+::selection{
+    background:orange;
+    color:black;
+    font-weight:bold;
+}
+
+html{
+    font-size:1rem;
+    overflow-x: hidden;
+    scroll-padding-top:6rem;
+    scroll-behavior: smooth;
+}
+section{
+    padding:1.5rem;
+}
+.heading{
+    text-align:center;
+    padding:1rem;
+
+}
+.heading span{
+    font-size:2.5rem;
+    color:orange;
+    background:rgb(219, 209, 191);
+    padding:0 10px;
+    margin:.07rem;
+}
+.heading .space{
+    background:none;
+}
+
+.btn{
+    display: inline-block;
+    margin:.8rem;
+    background:orange;
+    color:white;
+    padding:.5rem 1.5rem;
+    border:.2rem solid orange;
+    cursor:pointer;
+    font-size:1.2rem;
+    border-radius: 20px;
+}
+.btn:hover{
+    background:rgb(223, 177, 92);
+    color:darkblue;
+}
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    display:flex;
+    background:rgb(12, 44, 44);
+    align-items:center;
+    justify-content:space-between;
+    padding:1rem 9%;
+    z-index: 1000;
+}
+
+header .logo{
+    font-size:2rem;
+    font-weight: bolder;
+    color:white;
+    text-transform: uppercase;
+}
+header .logo .span-1{
+    color:orange;
+}
+header .logo .span-2{
+    color:rgb(21, 223, 21);
+}
+header .navbar a{
+    color:white;
+    font-size:1.2rem;
+    margin:0.5rem;
+}
+header .icons i{
+    color:white;
+    font-size:1.3rem;
+    margin:.8rem;
+}
+
+header .navbar a:hover{
+    color:orange;
+}
+
+header .icons i:hover{
+    color:orange;
+}
+
+header .search-bar-container{
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    padding:1.5rem 2rem;
+    background:rgb(57, 73, 73);
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    z-index: 1001;
+    clip-path: polygon(0 0,100% 0,100% 0,0 0);
+}
+
+header .search-bar-container.active{
+    clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+}
+
+
+header .search-bar-container #search-bar{
+width:80%;
+padding:.5rem;
+text-transform: none;
+color:rgb(39, 27, 27);
+font-size:1rem;
+border-radius: 20px;;
+}
+
+header .search-bar-container label{
+color:rgb(233, 142, 6);
+font-size:2rem;
+margin-left:2rem;
+background:none;
+cursor:pointer;
+}
+
+header .search-bar-container label:hover{
+color:orange;
+}
+
+.login-form-container.active{
+    top:0;
+}
+.login-form-container{
+    position:fixed;
+    top:-100%;
+    left:0;
+    z-index: 10000;
+    min-height:100vh;
+    width:100%;
+    display:flex;
+    background:rgba(47, 72, 82,.5) ;
+    color:black;
+    align-items:center;
+    justify-content: center;
+}
+.login-form-container form{
+    margin:2rem;
+    padding:2.3rem 2rem;
+border-radius: 20px;
+background:white ;
+width:30rem;
+height:30rem;
+}
+
+.login-form-container form h3{
+font-size:2rem;
+color:black;
+text-transform:uppercase;
+text-align:center;
+padding:.5rem 0;
+}
+
+.login-form-container form .box{
+width:90%;
+padding:.5rem;
+font-size:1.2rem;
+color:black;
+margin:.5rem ;
+border:.1rem solid grey;
+border-radius: 10px;
+}
+
+.login-form-container form .box:focus{
+border-color: orange;
+
+}
+
+
+.login-form-container form #remember{
+margin:1rem .5rem;
+
+}
+.login-form-container form  label{
+font-size: 1.2rem;
+}
+
+
+.login-form-container form .btn{
+    display:block;
+}
+
+.login-form-container form p{
+padding:.5rem 0;
+font-size:1.2rem;
+}
+.login-form-container form p a{
+color:red;
+}
+
+.login-form-container form p a:hover{
+color:rgb(53, 148, 211);
+}
+
+.login-form-container #form-close{
+    position:absolute;
+    top:7rem;
+    font-size:2.5rem;
+    color:rgb(250, 245, 245);
+    cursor:pointer;
+    border-radius: 10px;
+}
+.login-form-container #form-close:hover{
+color:orange;
+}
+
+input[type="checkbox"]{
+display:none;
+}
+label{
+margin-left: 30px;
+}
+label::before {
+
+    content:"\274C";
+
+    border:2px solid rgb(128, 26, 0);
+    border-radius:70% 40%;
+    margin:4px 10px 5px -35px;
+    background:rgb(23, 32, 23);
+
+}
+
+input[type="checkbox"]:checked + label::before{
+    content:"\2713";
+    padding:0 2px;
+    background:rgb(15, 224, 15);
+
+}
+
+#menu-bar{
+    color:white;
+    border:1px solid white;
+    font-size:1.5rem;
+    padding:.5rem;
+    margin:0;
+    cursor:pointer;
+    border-radius: 10px;
+    display:none;
+}
+
+
+.home{
+min-height:100vh;
+display:flex;
+align-items: center;
+justify-content: center;
+flex-flow: column;
+position:relative;
+}
+
+.home .content{
+    text-align: center;
+}
+.home .content .btn{
+    color:white;
+    font-weight: bold;
+}
+.home .content .btn:hover{
+    color:white;
+    font-weight: bold;
+    background:rgba(47, 72, 82,.5)
+}
+.home .content h2{
+    font-size:2.6rem;
+    color:rgb(248, 185, 11);
+    text-transform:uppercase;
+    text-shadow:0 20px 10px 2px grey;
+}
+
+.home .content p{
+    font-size:1.7rem;
+    color:rgb(248, 185, 11);
+    text-transform:uppercase;
+    text-shadow:0 20px 10px 2px grey;
+}
+
+.home .video-container video{
+    position:absolute;
+    z-index:-1;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    object-fit:fill;
+}
+
+.home .controls{
+    padding:1rem;
+    border-radius:5rem;
+    background:rgba(0,0,0,.7);
+    position:relative;
+    top:10rem;
+}
+
+
+.home .controls .vid-btn{
+    height:1.5rem;
+    width:1.5rem;
+    display:inline-block;
+    border-radius:50%;
+    background:white;
+    cursor:pointer;
+    margin:0 .5rem;
+}
+
+.home .controls .vid-btn.active{
+    background:orange;
+}
+
+
+.book .row{
+    display:flex;
+    gap:1.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.book .row .image{
+    flex:1 1 40rem;
+}
+.book .row .image img{
+    width:100%;
+}
+.book .row form{
+    flex:1 1 40rem;
+    padding:2rem;
+    box-shadow:0 .1rem 2rem .1rem grey;
+    border-radius: .5rem;
+}
+
+.book .row form .inputbox{
+    padding:.5rem 0;
+}
+.book .row form .inputbox input{
+width:100%;
+padding:.3rem;
+border:.1rem solid grey;
+font-size:1.3rem;
+color:black;
+text-transform:none;
+border-radius:10px;
+margin-top:.3rem;
+}
+
+.book .row form .inputbox h3{
+font-size:1.5rem;
+}
+
+input[type="submit"]{
+    background:orange;
+    padding:.5rem;
+    font-size:1.5rem;
+    margin:10px auto auto 20px;
+    border-radius:10px;
+}
+
+.packages .box-container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:2rem;
+}
+
+.packages .box-container .box{
+    flex:1 1 30rem;
+    border-radius: 10px;
+    overflow:hidden;
+    box-shadow: 0 1rem 2rem .1rem grey;
+}
+.packages .box-container .box img{
+    height: 25rem;
+    width:100%;
+    object-fit: cover;
+
+}
+
+.packages .box-container .box .content{
+    padding:2rem;
+}
+.packages .box-container .box .content h3{
+    font-size:1.5rem;
+}
+.packages .box-container .box .content h3 i{
+color:orange;
+margin-right: 10px;
+}
+.packages .box-container .box .content p{
+font-size:1.2rem;
+padding:1rem 0;
+}
+
+.packages .box-container .box .content .stars i{
+color:orange;
+font-size:1rem;
+}
+
+.packages .box-container .box .content .price{
+font-size:1.6rem;
+padding-top:.2rem;
+}
+
+.packages .box-container .box .content .price span{
+text-decoration:line-through;
+font-size:1.3rem;
+}
+
+.services .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
+.services .box-container .box{
+    flex:1 1 30rem;
+    border-radius: 10px;
+    padding:10px;
+    text-align: center;
+}
+
+.services .box-container .box i{
+    font-size:5rem;
+    padding:1rem;
+    color:orange;
+}
+
+.services .box-container .box:hover{
+    box-shadow: 2px 2px 5px 1px grey;
+
+}
+
+.services .box-container .box h3{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.services .box-container .box p{
+    font-size:1.3rem;
+    padding:5px;
+}
+
+.gallery .box-container{
+    display:flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
+
+.gallery .box-container .box{
+    overflow: hidden;
+    box-shadow:2px 2px 5px 1px grey;
+    border-radius:10px;
+    flex:1 1 30rem;
+    height:25rem;
+    position:relative;
+}
+.gallery .box-container .box img{
+    height:100%;
+    width:100%;
+    object-fit:cover ;
+}
+.gallery .box-container .box .content{
+    position:absolute;
+    top:-100%;left:0;
+    height:100%;
+    width:100%;
+    text-align: center;
+    background:rgba(14, 21, 24, 0.8);
+    padding:2rem;
+    padding-top:4rem;
+
+}
+
+.gallery .box-container .box:hover .content{
+    top:0;
+}
+
+.gallery .box-container .box .content h3{
+    font-size: 2rem;
+    color:orange;
+}
+.gallery .box-container .box .content p{
+    font-size: 1.3rem;
+    color:white;
+}
+
+.review .review-slider{
+    padding-bottom:5rem;
+}
+
+.review .box{
+    padding:2rem;
+    text-align: center;
+    box-shadow: 0 1rem 2rem .1rem grey;
+    border-radius: 10px;;
+}
+
+.review .box img{
+    height:13rem;
+    width:13rem;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom:1rem;
+
+}
+
+.review .box h3{
+    font-size: 2rem;
+}
+
+.review .box p{
+    font-size: 1.3rem;
+    padding:1rem 0;
+}
+.review .box .stars{
+    color:orange;
+    font-size:1.3rem;
+}
+
+.contact .row{
+    display:flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    align-items: center;
+}
+
+.contact .row .image{
+    flex:1 1 35%;
+}
+
+
+.contact .row .image img{
+    width:100%;
+}
+
+.contact .row form{
+    flex:1 1 50%;
+    padding:1.6rem;
+    box-shadow: 2px 2px 5px 1px grey;
+    border:1px solid grey;
+    border-radius: 10px;
+}
+
+
+.contact .row form .inputbox{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.contact .row form .inputbox input,.contact .row form textarea{
+    width:40%;
+    margin:1rem 0;
+    padding:.5rem;
+    font-size: 1.3rem;
+    color:black;
+    background:rgb(226, 218, 218);
+    border-radius: 10px;;
+}
+
+.contact .row form textarea{
+    height:15rem;
+    resize: none;
+    width:40%;
+}
+
+.brand-container{
+    text-align: center;
+}
+
+.footer{
+    background:rgb(200, 238, 238);
+    text-align:center;
+}
+
+.footer .box-container{
+    display:flex;
+    flex-wrap: wrap;
+    gap:1rem;
+}
+
+.footer .box-container .box{
+    padding:1rem o;
+    flex:1 1 20rem;
+    text-align:center
+}
+.footer .box-container .box a{
+    display:block;
+text-transform: uppercase;
+
+}
+
+
+
+@media (max-width:1200px){
+html{
+    font-size:90%;
+}
+
+}
+
+@media (max-width:991px){
+    html{
+        font-size:80%;
+        }
+        header{
+            padding:2rem;
+        }
+        section{
+            padding:2rem;
+        }
+       
+
+    }
+
+
+
+@media (max-width:850px){
+html{
+    font-size:90%;
+}
+#menu-bar{
+    display:initial;
+}
+header .navbar{
+    font-size:2rem;
+    position:absolute;
+    top:100%;right:0;left:0;
+    background:rgb(12, 44, 44);
+border-top:1px solid grey;
+clip-path: polygon(0 0,100% 0,100% 0,0 0);
+}
+header .navbar a{
+    display:block;
+    border-radius:1rem;
+    padding:5px;
+    margin:1rem 0;
+
+}
+header .navbar.active{
+    clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+}
+.contact .row form{
+flex:1 1 50rem;
+}
+
+.contact .row .image{
+flex:1 1 35rem;
+}
+}
+
+@media (max-width:500px){
+    html{
+        font-size:80%;
+    }
+    .heading span{
+        font-size:2rem;
+    }
+    .contact .row form .inputbox input{
+        width:100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
